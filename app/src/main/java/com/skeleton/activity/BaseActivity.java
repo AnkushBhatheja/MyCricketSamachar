@@ -71,15 +71,6 @@ public abstract class BaseActivity extends AppCompatActivity implements AppConst
         super.onResume();
         LocalBroadcastManager.getInstance(this).registerReceiver(notificationReceiver, new IntentFilter(NOTIFICATION_RECEIVED));
 
-
-        /**
-         * Draw Code Version On the Every Screen Of the APP
-         */
-        if (BuildConfig.WATER_MARK) {
-            DrawOnTop mDraw = new DrawOnTop(this);
-            addContentView(mDraw, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            mDraw.bringToFront();
-        }
     }
 
     @Override
